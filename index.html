@@ -1,129 +1,302 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
-<head>
-    <!-- הגדרות בסיסיות לדפדפן ולמובייל -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- הכנה ל-SEO -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>רכישת אותיות בספר תורה | מעלות קדושים</title>
-    <meta name="description" content="קחו חלק ברכישת אותיות בספר תורה לעילוי נשמת מרנן המקובלים רבי יהודה פתאיה, הבבא סאלי ורבי עובדיה יוסף, ולזכר קדושי מלחמת חרבות ברזל.">
-    <meta name="keywords" content="ספר תורה, רכישת אותיות, תרומה לספר תורה, לעילוי נשמה, רבי יהודה פתאיה, בבא סאלי, רבי עובדיה יוסף, חרבות ברזל">
-    <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="קחו חלק בכתיבת ספר תורה לזכר מרנן הצדיקים ולזכר קדושי מלחמת חרבות ברזל. שותפות באות, מילה, פסוק או פרשה, והגרלות מיוחדות לתורמים."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://rest72611-lang.github.io/sefer-torah-donation-landing-page/" />
+    <meta property="og:title" content="רכישת אותיות בספר תורה | מעלות קדושים" />
+    <meta property="og:description" content="שותפות בכתיבת ספר תורה והגרלות מיוחדות לתורמים." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo-maalot-kedoshim-new.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header + ניווט פנימי -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand-logo" href="#hero" aria-label="חזרה לראש הדף">
+          <img src="assets/logo-maalot-kedoshim-new.png" alt="לוגו מעלות קדושים" />
+        </a>
 
-    <!-- תגיות שיתוף בסיסיות -->
-    <meta property="og:title" content="רכישת אותיות בספר תורה לזכר הצדיקים וקדושי חרבות ברזל">
-    <meta property="og:description" content="הצטרפו לזכות הגדולה וקחו חלק בכתיבת ספר תורה לעילוי נשמת הצדיקים ולזכר קדושי מלחמת חרבות ברזל.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/logo-maalot-kedoshim.png">
-
-    <!-- קובץ עיצוב -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- ראש האתר: לוגו, תמונות וכותרת מרכזית -->
-    <header class="hero" id="top">
-        <div class="hero-overlay">
-            <div class="container">
-
-                <!-- לוגו העמותה -->
-                <div class="logo-wrapper">
-                    <img src="assets/logo-maalot-kedoshim.png" alt="לוגו בית המדרש והמכון התורני מעלות קדושים" class="site-logo">
-                </div>
-
-                <!-- שלוש תמונות הרבנים: כל תמונה שליש רוחב בדסקטופ -->
-                <div class="rabbis-gallery" aria-label="תמונות הרבנים">
-                    <figure class="rabbi-card">
-                        <img src="assets/rabbi-yehuda-petaya.jpg" alt="רבי יהודה פתאיה זי״ע">
-                    </figure>
-
-                    <figure class="rabbi-card">
-                        <img src="assets/baba-sali.jpg" alt="הבבא סאלי זי״ע">
-                    </figure>
-
-                    <figure class="rabbi-card">
-                        <img src="assets/rabbi-ovadia.jpg" alt="רבי עובדיה יוסף זי״ע כותב ספר תורה">
-                    </figure>
-                </div>
-
-                <!-- כותרת ראשית -->
-                <h1>
-                    רכישת אותיות בספר תורה לזכרם מרנן המקובלים רבי יהודה פתאיה זי״ע והבבא סאלי זי״ע ורבי עובדיה יוסף זי״ע ולזכרם של קדושי מלחמת חרבות ברזל
-                </h1>
-
-                <a href="#donate" class="hero-button">אני רוצה לקחת חלק בזכות</a>
-            </div>
-        </div>
+        <nav class="main-nav" aria-label="ניווט ראשי">
+          <a href="#hero">ראשי</a>
+          <a href="#partnership">השותפות</a>
+          <a href="#raffle">הגרלות לתורמים</a>
+          <a href="#how-it-works">איך זה עובד</a>
+          <a href="#segulot">למה לתרום?</a>
+          <a class="nav-donate" href="#donate">תרומה</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- תוכן מרכזי של דף הנחיתה -->
     <main>
-        <!-- בקשת התרומה המרכזית -->
-        <section class="intro-section" aria-labelledby="intro-title">
-            <div class="container">
-                <h2 id="intro-title">שותפות בכתיבת ספר תורה</h2>
-                <p class="main-request">
-                    אנו פונים אליכם בבקשה חמה להיות שותפים בזכות הגדולה של כתיבת ספר תורה לעילוי נשמתם של מרנן המקובלים רבי יהודה פתאיה זי״ע, הבבא סאלי זי״ע ורבי עובדיה יוסף זי״ע, ולזכרם של קדושי מלחמת חרבות ברזל. כל תרומה, קטנה כגדולה, מצטרפת לבניין רוחני נצחי ונשארת לזכות התורמים ובני משפחותיהם.
-                </p>
+      <!-- Hero עם תמונת רקע השראת זיכרון -->
+      <section id="hero" class="hero section-dark">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="hero-kicker">לזכר קדושי חרבות ברזל</p>
+            <h1>רוכשים אות בספר תורה, זוכים בשותפות נצחית — ומשתתפים בהגרלות יקרות ערך</h1>
+            <p class="hero-subtitle">
+              כתיבת ספר תורה לזכר מרנן המקובלים רבי יהודה פתאיה זי״ע, הבבא סאלי זי״ע,
+              רבי עובדיה יוסף זי״ע, ולזכרם של קדושי מלחמת חרבות ברזל.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#donate">לתרומה מאובטחת</a>
+              <a class="btn btn-outline" href="#raffle">לפרטי ההגרלות</a>
             </div>
-        </section>
+          </div>
 
-        <!-- שש פסקאות חיבור לתורמים -->
-        <section class="message-section" aria-labelledby="messages-title">
-            <div class="container">
-                <h2 id="messages-title">למה כדאי להצטרף דווקא עכשיו?</h2>
+          <div class="rabbi-gallery" aria-label="תמונות הרבנים לזכרם נכתב ספר התורה">
+            <figure>
+              <img src="assets/rabbi-yehuda-petaya.jpg" alt="רבי יהודה פתאיה זי״ע" />
+              <figcaption>רבי יהודה פתאיה זי״ע</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/baba-sali.jpg" alt="הבבא סאלי זי״ע" />
+              <figcaption>הבבא סאלי זי״ע</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/rabbi-ovadia.jpg" alt="רבי עובדיה יוסף זי״ע כותב ספר תורה" />
+              <figcaption>רבי עובדיה יוסף זי״ע</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-                <div class="message-grid">
-                    <p class="message-card">
-                        ספר תורה נכתב פעם אחת, אך הזכות שלו ממשיכה להיקרא שוב ושוב בכל עת שקוראים בו. זו שותפות שאינה מסתיימת ברגע התרומה, אלא נשארת עומדת לדורות.
-                    </p>
+      <section id="intro" class="intro">
+        <div class="container narrow">
+          <h2>כך תוכלו לקחת חלק בכתיבת ספר התורה</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+          <p>
+            אנו מזמינים את הציבור להיות שותף בכתיבת ספר תורה לעילוי נשמת הצדיקים ולזכר קדושי מלחמת חרבות ברזל.
+            כל תרומה מצטרפת לזכות גדולה, מחזקת את השלמת הספר, ומעניקה לתורמים שותפות במצווה לדורות.
+          </p>
+        </div>
+      </section>
 
-                    <p class="message-card">
-                        רכישת אותיות בספר תורה היא דרך מיוחדת להתחבר לקדושת התורה ולתת חלק מעשי במצווה כללית של עם ישראל. כל אות מצטרפת לשלמות הספר כולו.
-                    </p>
+      <!-- בחירת שותפות -->
+      <section id="partnership" class="partnership section-soft">
+        <div class="container">
+          <div class="section-heading">
+            <h2>בחרו את השותפות שלכם</h2>
+            <span class="section-divider" aria-hidden="true"></span>
+            <p>כל אחד יכול להיות שותף בכתיבת ספר התורה — באות, במילה, בפסוק, בפרשה או בשותפות מכובדת לפי יכולתו.</p>
+          </div>
 
-                    <p class="message-card">
-                        ההקדשה לעילוי נשמת גדולי ישראל ולזכר קדושי מלחמת חרבות ברזל מחברת את התרומה לזיכרון, לקדושה, להכרת הטוב ולתפילה על כלל ישראל.
-                    </p>
+          <div class="cards-grid">
+            <article class="card partnership-card">
+              <span class="card-icon">📜</span>
+              <h3>אות בספר תורה</h3>
+              <p>שותפות אישית בכתיבת אות מספר התורה — זכות קטנה בגודל, גדולה במשמעות.</p>
+              <strong>לפי בחירה</strong>
+            </article>
+            <article class="card partnership-card">
+              <span class="card-icon">✨</span>
+              <h3>מילה בספר תורה</h3>
+              <p>שותפות במילה קדושה מתוך ספר התורה, לזכותכם ולזכות בני משפחתכם.</p>
+              <strong>לפי בחירה</strong>
+            </article>
+            <article class="card partnership-card">
+              <span class="card-icon">🔯</span>
+              <h3>פסוק בספר תורה</h3>
+              <p>בחירת שותפות משמעותית בפסוק מספר התורה, לעילוי נשמה, לרפואה או להצלחה.</p>
+              <strong>לפי בחירה</strong>
+            </article>
+            <article class="card partnership-card">
+              <span class="card-icon">📖</span>
+              <h3>פרשה</h3>
+              <p>שותפות מכובדת בפרשה מספר התורה, זכות הנשארת לדורות.</p>
+              <strong>לפי בחירה</strong>
+            </article>
+            <article class="card partnership-card">
+              <span class="card-icon">👑</span>
+              <h3>שותפות מכובדת</h3>
+              <p>תרומה משמעותית להשלמת כתיבת ספר התורה והכנסתו בקדושה ובשמחה.</p>
+              <strong>לפי בחירה</strong>
+            </article>
+            <article class="card partnership-card">
+              <span class="card-icon">🤝</span>
+              <h3>סכום אחר</h3>
+              <p>כל תרומה מצטרפת לזכות הגדולה ומקרבת את השלמת ספר התורה.</p>
+              <strong>לפי בחירה</strong>
+            </article>
+          </div>
+        </div>
+      </section>
 
-                    <p class="message-card">
-                        כל אחד יכול להשתתף לפי יכולתו. גם תרומה קטנה יכולה להיות חלק ממשהו גדול, קדוש ומשמעותי, כאשר היא ניתנת בלב שלם ולמטרה נעלית.
-                    </p>
+      <!-- הגרלות לתורמים -->
+      <section id="raffle" class="raffle">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow-dark">הטבה מיוחדת לתורמים</p>
+            <h2>הגרלות יקרות ערך למשתתפים בכתיבת הספר</h2>
+            <span class="section-divider" aria-hidden="true"></span>
+            <p>מעבר לזכות הגדולה בכתיבת ספר התורה, תורמים בסכומים הבאים נכנסים להגרלות מיוחדות.</p>
+          </div>
 
-                    <p class="message-card">
-                        זו הזדמנות לזכות את בני המשפחה, להקדיש לעילוי נשמה, לרפואה, להצלחה, לפרנסה טובה ולשמירה, מתוך חיבור ישיר לתורה הקדושה.
-                    </p>
+          <div class="raffle-grid raffle-grid-four">
+            <article class="raffle-card">
+              <span class="raffle-badge">תרומה מעל 2,000 ₪</span>
+              <div class="raffle-card-content">
+                <p class="raffle-small-title">השתתפות בהגרלה על</p>
+                <h3>רכב חדש</h3>
+                <p>תורמים מעל 2,000 ₪ נכנסים להגרלה על רכב חדש.</p>
+                <strong class="raffle-value">בשווי 50,000 ₪</strong>
+              </div>
+              <img src="assets/prize-car-modern.jpg" alt="רכב חדש מודרני להגרלה לתורמים מעל 2,000 שקלים" />
+            </article>
 
-                    <p class="message-card">
-                        כאשר הציבור כולו מתאחד סביב ספר תורה, נבנית שותפות של אמונה, זיכרון ותקווה. כל תורם הופך לחלק מהשלמת הספר ומהפצת אור התורה.
-                    </p>
-                </div>
-            </div>
-        </section>
+            <article class="raffle-card">
+              <span class="raffle-badge">תרומה מעל 1,000 ₪</span>
+              <div class="raffle-card-content">
+                <p class="raffle-small-title">אחת מאפשרויות הזכייה</p>
+                <h3>שואב שוטף</h3>
+                <p>תורמים מעל 1,000 ₪ נכנסים להגרלה על מוצר יקר ערך לבחירה.</p>
+              </div>
+              <img src="assets/prize-vacuum-modern.jpg" alt="שואב שוטף מודרני כאפשרות זכייה בהגרלה" />
+            </article>
 
-        <!-- אזור התרומה -->
-        <section class="donation-section" id="donate" aria-labelledby="donation-title">
-            <div class="container">
-                <div class="donation-box">
-                    <h2 id="donation-title">לתרומות לחץ כאן</h2>
-                    <p>
-                        לחצו על הכפתור והצטרפו לשותפות בכתיבת ספר התורה.
-                    </p>
-                    <a href="https://www.matara.pro/nedarimplus/Forms/3472.html?MasofId=&ClientId=&Zeout=&Version=2" class="donation-link" target="_blank" rel="noopener noreferrer">
-                        מעבר מאובטח לתרומה
-                    </a>
-                </div>
-            </div>
-        </section>
+            <article class="raffle-card">
+              <span class="raffle-badge">תרומה מעל 1,000 ₪</span>
+              <div class="raffle-card-content">
+                <p class="raffle-small-title">אחת מאפשרויות הזכייה</p>
+                <h3>מחשב נייד</h3>
+                <p>תורמים מעל 1,000 ₪ נכנסים להגרלה על מוצר יקר ערך לבחירה.</p>
+              </div>
+              <img src="assets/prize-laptop-modern.jpg" alt="מחשב נייד מודרני כאפשרות זכייה בהגרלה" />
+            </article>
+
+            <article class="raffle-card">
+              <span class="raffle-badge">תרומה מעל 1,000 ₪</span>
+              <div class="raffle-card-content">
+                <p class="raffle-small-title">אחת מאפשרויות הזכייה</p>
+                <h3>קורקינט חשמלי</h3>
+                <p>תורמים מעל 1,000 ₪ נכנסים להגרלה על מוצר יקר ערך לבחירה.</p>
+              </div>
+              <img src="assets/prize-scooter-modern.jpg" alt="קורקינט חשמלי מודרני כאפשרות זכייה בהגרלה" />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how-it-works section-soft">
+        <div class="container">
+          <div class="section-heading">
+            <h2>איך זה עובד?</h2>
+            <span class="section-divider" aria-hidden="true"></span>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">1</span>
+              <h3>בוחרים שותפות</h3>
+              <p>בוחרים האם להשתתף באות, מילה, פסוק, פרשה או סכום אחר.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">2</span>
+              <h3>מקדישים</h3>
+              <p>מקדישים את התרומה לעילוי נשמה, לרפואה, להצלחה או לזכות בני המשפחה.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">3</span>
+              <h3>משלימים תרומה</h3>
+              <p>לוחצים על כפתור התרומה ועוברים לעמוד המאובטח להשלמת התרומה.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- סגולות ולמה כדאי לתרום -->
+      <section id="segulot" class="segulot">
+        <div class="container">
+          <div class="section-heading">
+            <h2>למה כדאי לקחת חלק בספר התורה?</h2>
+            <span class="section-divider" aria-hidden="true"></span>
+            <p>רכישת אות בספר תורה היא שותפות במצווה גדולה, המחברת בין זכות רוחנית, זיכרון נצחי וחיזוק כלל ישראל.</p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="card merit-card">
+              <h3>סגולה לרפואה ושמירה</h3>
+              <p>ידועה מעלת ההשתתפות בכתיבת ספר תורה כסגולה לרפואה, לשמירה ולהסרת קטרוגים ועין הרע.</p>
+            </article>
+            <article class="card merit-card">
+              <h3>סגולה להצלחה ושפע</h3>
+              <p>חכמינו מלמדים על מעלת הקונה חלק בספר תורה כסגולה לברכה, הצלחה ושמירת הנכסים.</p>
+            </article>
+            <article class="card merit-card">
+              <h3>סגולה לזיווג הגון</h3>
+              <p>שותפות במצווה גדולה מחברת את האדם לשורש של ברכה, שותפות טובה וישועה קרובה.</p>
+            </article>
+            <article class="card merit-card">
+              <h3>סגולה לחכמה ולילדים</h3>
+              <p>כתיבת ספר תורה מחזקת את הקשר לתורה, לחכמה, להמשכיות ולבניין הדורות הבאים.</p>
+            </article>
+            <article class="card merit-card">
+              <h3>לעילוי נשמת נפטרים</h3>
+              <p>הקדשה בספר תורה היא זכות גדולה לעילוי נשמה, וגורמת נחת רוח לנפטרים בעולם האמת.</p>
+            </article>
+            <article class="card merit-card">
+              <h3>מצווה שמאחדת את כולנו</h3>
+              <p>מצוות כתיבת ספר תורה מאחדת את כלל ישראל סביב התורה, הזיכרון והשותפות בקדושה.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="merit" class="merit section-soft">
+        <div class="container">
+          <div class="section-heading">
+            <h2>זכות שממשיכה לדורות</h2>
+            <span class="section-divider" aria-hidden="true"></span>
+          </div>
+
+          <div class="cards-grid">
+            <article class="card merit-card">
+              <h3>זכות לדורות</h3>
+              <p>ספר תורה נכתב פעם אחת, אך הזכות שבו נמשכת בכל קריאה, בכל שבת ובכל חג.</p>
+            </article>
+            <article class="card merit-card">
+              <h3>לעילוי נשמת הצדיקים</h3>
+              <p>השותפות בספר התורה מוקדשת לעילוי נשמת מרנן המקובלים והצדיקים, שזכותם תגן עלינו.</p>
+            </article>
+            <article class="card merit-card">
+              <h3>לזכר קדושי מלחמת חרבות ברזל</h3>
+              <p>כתיבת הספר נעשית גם לזכרם של הקדושים שנפלו ונרצחו, ולכבוד זכרם הטהור.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="donate" class="donate section-dark">
+        <div class="container narrow">
+          <h2>אני רוצה לקחת חלק בספר התורה</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+          <p>בלחיצה על הכפתור תעברו לעמוד התרומה המאובטח, שם תוכלו לבחור סכום ולהקדיש את התרומה לזכות יקיריכם.</p>
+          <a
+            class="btn btn-primary btn-large"
+            href="https://www.matara.pro/nedarimplus/Forms/3472.html?MasofId=&ClientId=&Zeout=&Version=2"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="מעבר לעמוד תרומה לרכישת אותיות בספר תורה"
+          >
+            לתרומות לחץ כאן
+          </a>
+        </div>
+      </section>
     </main>
 
-    <!-- תחתית האתר -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>© כל הזכויות שמורות לאריה שטינברג | 053-310-5968 📞</p>
-        </div>
+    <footer id="footer" class="site-footer">
+      <div class="container">
+        <p>כל הזכויות שמורות לאריה שטינברג 0533105968 📜</p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

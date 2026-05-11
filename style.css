@@ -1,278 +1,696 @@
-/* איפוס בסיסי */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* משתני צבעים מרכזיים */
 :root {
-    --primary: #5b1b5f;
-    --primary-dark: #35113a;
-    --gold: #d8a441;
-    --gold-light: #f5e2ad;
-    --cream: #fff8e8;
-    --text: #241b16;
-    --muted: #6f625c;
-    --white: #ffffff;
-    --shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+  --color-navy: #10233f;
+  --color-navy-dark: #081626;
+  --color-blue-soft: #203d67;
+  --color-gold: #c9a227;
+  --color-gold-light: #e8d58a;
+  --color-parchment: #f7f0de;
+  --color-cream: #fff9ec;
+  --color-brown: #6b4e2e;
+  --color-text: #1f1f1f;
+  --color-muted: #6f6a5f;
+  --color-white: #ffffff;
+  --color-border: rgba(201, 162, 39, 0.35);
+  --shadow-soft: 0 12px 32px rgba(8, 22, 38, 0.12);
+  --shadow-card: 0 8px 24px rgba(8, 22, 38, 0.1);
 }
 
-/* עיצוב כללי */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, "Noto Sans Hebrew", "Segoe UI", sans-serif;
-    line-height: 1.8;
-    color: var(--text);
-    background: linear-gradient(180deg, #fffaf0 0%, #ffffff 45%, #fff8e8 100%);
+  margin: 0;
+  font-family: Arial, "Heebo", "Assistant", sans-serif;
+  line-height: 1.8;
+  color: var(--color-text);
+  background: var(--color-cream);
 }
 
-/* קונטיינר אחיד לכל האתר */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+section {
+  padding: 72px 0;
+  scroll-margin-top: 105px;
+}
+
 .container {
-    width: min(1120px, 92%);
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* אזור ההרו */
-.hero {
-    background:
-        radial-gradient(circle at top, rgba(216, 164, 65, 0.28), transparent 34%),
-        linear-gradient(135deg, var(--primary-dark), var(--primary));
-    color: var(--white);
-    text-align: center;
+.narrow {
+  max-width: 860px;
+  text-align: center;
 }
 
-.hero-overlay {
-    padding: 24px 0 56px;
-    background: rgba(0, 0, 0, 0.16);
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
-/* לוגו */
-.logo-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 24px;
-}
-
-.site-logo {
-    width: min(260px, 70vw);
-    background: var(--white);
-    padding: 12px;
-    border-radius: 24px;
-    box-shadow: var(--shadow);
-}
-
-/* גלריית הרבנים בפלקס */
-.rabbis-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 0;
-    margin: 0 auto 32px;
-    overflow: hidden;
-    border: 4px solid rgba(216, 164, 65, 0.85);
-    border-radius: 28px;
-    box-shadow: var(--shadow);
-    background: var(--white);
-}
-
-.rabbi-card {
-    flex: 1 1 33.333%;
-    min-height: 260px;
-    border-left: 2px solid rgba(216, 164, 65, 0.55);
-}
-
-.rabbi-card:last-child {
-    border-left: 0;
-}
-
-.rabbi-card img {
-    width: 100%;
-    height: 100%;
-    min-height: 260px;
-    object-fit: cover;
-    display: block;
-}
-
-/* כותרת ראשית */
 h1 {
-    max-width: 1000px;
-    margin: 0 auto 26px;
-    font-size: clamp(1.9rem, 4vw, 3.6rem);
-    line-height: 1.35;
-    font-weight: 800;
-    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.32);
-}
-
-/* כפתור בהרו */
-.hero-button,
-.donation-link {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 800;
-    border-radius: 999px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-}
-
-.hero-button {
-    padding: 14px 30px;
-    color: var(--primary-dark);
-    background: linear-gradient(135deg, var(--gold-light), var(--gold));
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
-}
-
-.hero-button:hover,
-.donation-link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.22);
-}
-
-/* אזורי תוכן */
-.intro-section,
-.message-section,
-.donation-section {
-    padding: 60px 0;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: 1.18;
+  font-weight: 900;
+  margin-bottom: 22px;
 }
 
 h2 {
-    color: var(--primary);
-    text-align: center;
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
-    margin-bottom: 22px;
-    line-height: 1.35;
+  font-size: clamp(1.6rem, 3vw, 2.45rem);
+  line-height: 1.35;
+  font-weight: 850;
+  margin-bottom: 14px;
 }
 
-.main-request {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 30px;
-    font-size: clamp(1.15rem, 2.3vw, 1.35rem);
-    background: var(--white);
-    border: 2px solid rgba(216, 164, 65, 0.55);
-    border-radius: 24px;
-    box-shadow: 0 12px 32px rgba(91, 27, 95, 0.1);
+h3 {
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
 }
 
-/* גריד הודעות עם Flexbox: שלוש בשורה בדסקטופ */
-.message-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-    margin-top: 32px;
+p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: inherit;
 }
 
-.message-card {
-    flex: 1 1 calc(33.333% - 22px);
-    min-width: 280px;
-    padding: 26px;
-    background: var(--white);
-    border: 2px solid rgba(91, 27, 95, 0.18);
-    border-top: 6px solid var(--gold);
-    border-radius: 22px;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 249, 236, 0.97);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
 }
 
-/* אנימציה בריחוף */
-.message-card:hover {
-    transform: translateY(-8px) scale(1.015);
-    border-color: var(--gold);
-    box-shadow: 0 18px 40px rgba(91, 27, 95, 0.18);
+.header-inner {
+  min-height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 28px;
 }
 
-/* אזור תרומה */
-.donation-section {
-    background: linear-gradient(135deg, var(--cream), #ffffff);
+.site-header .container {
+  max-width: none;
+  padding-right: 18px;
+  padding-left: 28px;
 }
 
-.donation-box {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 42px 28px;
-    text-align: center;
-    background: var(--white);
-    border: 3px solid var(--gold);
-    border-radius: 28px;
-    box-shadow: var(--shadow);
+.brand-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.donation-box p {
-    color: var(--muted);
-    font-size: 1.15rem;
-    margin-bottom: 26px;
+.brand-logo img {
+  width: clamp(190px, 20vw, 310px);
+  height: 92px;
+  object-fit: contain;
+  object-position: right center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  filter: none;
 }
 
-.donation-link {
-    padding: 16px 36px;
-    color: var(--white);
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    font-size: 1.15rem;
+.main-nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
-/* פוטר */
+.main-nav a {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--color-navy-dark);
+  font-weight: 800;
+  font-size: 0.98rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: var(--color-parchment);
+  transform: translateY(-1px);
+}
+
+.main-nav .nav-donate {
+  background: var(--color-gold);
+  color: var(--color-navy-dark);
+  box-shadow: 0 8px 18px rgba(201, 162, 39, 0.18);
+}
+
+.main-nav .nav-donate:hover {
+  background: var(--color-gold-light);
+}
+
+/* Hero */
+.section-dark {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-navy), var(--color-navy-dark));
+}
+
+.hero {
+  position: relative;
+  padding: 58px 0 82px;
+  background:
+    linear-gradient(180deg, rgba(8, 22, 38, 0.86), rgba(8, 22, 38, 0.74)),
+    url("assets/hero-bg-war.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 10%, rgba(232, 213, 138, 0.13), transparent 45%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 1020px;
+  margin: 0 auto 38px;
+}
+
+.hero-kicker,
+.eyebrow-dark {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  color: var(--color-gold-light);
+  background: rgba(201, 162, 39, 0.12);
+  border: 1px solid rgba(232, 213, 138, 0.38);
+  font-size: clamp(1.05rem, 2vw, 1.42rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.eyebrow-dark {
+  color: var(--color-brown);
+  background: rgba(201, 162, 39, 0.16);
+}
+
+.hero-subtitle {
+  max-width: 850px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 900;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-gold);
+  color: var(--color-navy-dark);
+  box-shadow: 0 10px 24px rgba(201, 162, 39, 0.24);
+}
+
+.btn-primary:hover {
+  background: var(--color-gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  color: var(--color-white);
+  border: 1px solid rgba(232, 213, 138, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  min-height: 58px;
+  padding: 15px 38px;
+  font-size: 1.18rem;
+}
+
+.rabbi-gallery {
+  display: flex;
+  gap: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(232, 213, 138, 0.45);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  background: var(--color-navy-dark);
+}
+
+.rabbi-gallery figure {
+  position: relative;
+  flex: 1 1 33.333%;
+  margin: 0;
+  min-height: 330px;
+}
+
+.rabbi-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+}
+
+.rabbi-gallery figcaption {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(8, 22, 38, 0.72);
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+/* Sections */
+.intro {
+  background: var(--color-cream);
+}
+
+.section-soft {
+  background: var(--color-parchment);
+}
+
+.section-heading {
+  max-width: 820px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.section-heading p,
+.intro p,
+.donate p {
+  color: var(--color-muted);
+}
+
+.section-dark p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section-divider {
+  display: block;
+  width: 84px;
+  height: 3px;
+  margin: 0 auto 22px;
+  border-radius: 999px;
+  background: var(--color-gold);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card,
+.step-card,
+.raffle-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover,
+.step-card:hover,
+.raffle-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-soft);
+}
+
+.card p,
+.step-card p,
+.raffle-card p {
+  color: var(--color-muted);
+  margin-bottom: 18px;
+}
+
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: var(--color-parchment);
+  color: var(--color-gold);
+  font-size: 1.45rem;
+}
+
+.partnership-card strong,
+.raffle-badge {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--color-parchment);
+  color: var(--color-brown);
+  font-weight: 900;
+}
+
+/* הגרלות */
+.raffle {
+  background: var(--color-cream);
+}
+
+.raffle-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.raffle-card {
+  display: grid;
+  gap: 22px;
+  align-content: start;
+  overflow: hidden;
+}
+
+.raffle-card-featured {
+  background: linear-gradient(180deg, var(--color-white), var(--color-parchment));
+}
+
+.raffle-card img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+}
+
+.prize-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.prize-options img {
+  max-height: 145px;
+  object-fit: cover;
+}
+
+/* איך זה עובד */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.step-card {
+  text-align: center;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-navy-dark);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.step-card p {
+  margin-bottom: 0;
+}
+
+/* CTA */
+.donate {
+  text-align: center;
+}
+
+.donate p {
+  max-width: 720px;
+  margin: 0 auto 28px;
+}
+
 .site-footer {
-    padding: 22px 0;
-    text-align: center;
-    color: var(--white);
-    background: var(--primary-dark);
+  padding: 28px 0;
+  text-align: center;
+  background: var(--color-navy-dark);
+  color: var(--color-white);
 }
 
 .site-footer p {
-    font-weight: 700;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
 }
 
-/* רספונסיביות לטאבלט */
+@media (max-width: 1020px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+
+  .brand-logo {
+    justify-content: flex-start;
+  }
+
+  .brand-logo img {
+    width: 220px;
+    height: 88px;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    padding-bottom: 3px;
+  }
+
+  section {
+    scroll-margin-top: 145px;
+  }
+
+  .raffle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prize-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
-    .rabbis-gallery {
-        flex-direction: column;
-        max-width: 520px;
-    }
+  .cards-grid,
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .rabbi-card {
-        border-left: 0;
-        border-bottom: 2px solid rgba(216, 164, 65, 0.55);
-    }
+  .rabbi-gallery {
+    flex-wrap: wrap;
+  }
 
-    .rabbi-card:last-child {
-        border-bottom: 0;
-    }
+  .rabbi-gallery figure {
+    flex: 1 1 50%;
+  }
 
-    .message-card {
-        flex-basis: calc(50% - 22px);
-    }
+  .rabbi-gallery figure:last-child {
+    flex-basis: 100%;
+  }
 }
 
-/* רספונסיביות למובייל */
-@media (max-width: 620px) {
-    .hero-overlay {
-        padding: 18px 0 42px;
-    }
+@media (max-width: 600px) {
+  section {
+    padding: 48px 0;
+    scroll-margin-top: 155px;
+  }
 
-    .site-logo {
-        width: min(220px, 82vw);
-    }
+  .container {
+    padding: 0 16px;
+  }
 
-    .rabbi-card,
-    .rabbi-card img {
-        min-height: 220px;
-    }
+  .brand-logo img {
+    width: 180px;
+    height: 74px;
+  }
 
-    .intro-section,
-    .message-section,
-    .donation-section {
-        padding: 42px 0;
-    }
+  .main-nav a {
+    padding: 7px 10px;
+    font-size: 0.93rem;
+  }
 
-    .main-request,
-    .message-card,
-    .donation-box {
-        padding: 22px;
-    }
+  .hero {
+    padding: 40px 0 56px;
+  }
 
-    .message-grid {
-        gap: 16px;
-    }
+  .hero-actions {
+    align-items: stretch;
+  }
 
-    .message-card {
-        flex-basis: 100%;
-    }
+  .btn,
+  .btn-large {
+    width: 100%;
+  }
+
+  .rabbi-gallery {
+    border-radius: 22px;
+  }
+
+  .rabbi-gallery figure {
+    flex-basis: 100%;
+    min-height: 285px;
+  }
+
+  .rabbi-gallery img {
+    min-height: 285px;
+  }
+
+  .cards-grid,
+  .steps-grid,
+  .prize-options {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .step-card,
+  .raffle-card {
+    padding: 24px;
+  }
+
+  .prize-options img {
+    max-height: none;
+  }
+}
+
+/* תיקון אזור ההגרלות - ארבעה כרטיסים אחידים */
+.raffle-grid-four {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.raffle-grid-four .raffle-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+  min-height: 100%;
+  text-align: center;
+}
+
+.raffle-grid-four .raffle-badge {
+  align-self: center;
+  background: var(--color-navy);
+  color: var(--color-gold-light);
+  border-radius: 999px;
+  padding: 7px 13px;
+  font-size: 0.95rem;
+}
+
+.raffle-card-content {
+  flex: 1;
+}
+
+.raffle-small-title {
+  margin-bottom: 4px;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.raffle-grid-four h3 {
+  color: var(--color-navy);
+  font-size: clamp(1.28rem, 2vw, 1.62rem);
+  margin-bottom: 8px;
+}
+
+.raffle-grid-four p {
+  margin-bottom: 8px;
+}
+
+.raffle-value {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 7px 14px;
+  border-radius: 12px;
+  background: var(--color-gold);
+  color: var(--color-navy-dark);
+  font-size: 1.08rem;
+  font-weight: 900;
+}
+
+.raffle-grid-four .raffle-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+}
+
+@media (max-width: 1020px) {
+  .raffle-grid-four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .raffle-grid-four {
+    grid-template-columns: 1fr;
+  }
 }

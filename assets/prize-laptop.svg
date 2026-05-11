@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460">
+  <rect width="700" height="460" rx="30" fill="#FFF9EC"/>
+  <rect x="145" y="90" width="410" height="245" rx="18" fill="#10233F"/>
+  <rect x="171" y="116" width="358" height="190" rx="10" fill="#EAF2FF"/>
+  <path d="M95 345h510l44 55H51l44-55Z" fill="#081626"/>
+  <path d="M270 365h160l18 18H252l18-18Z" fill="#C9A227" opacity="0.9"/>
+  <text x="350" y="72" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#10233F">מחשב נייד</text>
+</svg>

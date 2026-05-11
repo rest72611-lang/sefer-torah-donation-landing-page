@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460">
+  <rect width="700" height="460" rx="30" fill="#FFF9EC"/>
+  <path d="M255 310h190c40 0 73-31 76-71l16-205" fill="none" stroke="#10233F" stroke-width="20" stroke-linecap="round"/>
+  <path d="M520 65h88" stroke="#C9A227" stroke-width="18" stroke-linecap="round"/>
+  <path d="M190 330h315" stroke="#10233F" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="180" cy="350" r="52" fill="#081626"/>
+  <circle cx="180" cy="350" r="22" fill="#C9A227"/>
+  <circle cx="520" cy="350" r="52" fill="#081626"/>
+  <circle cx="520" cy="350" r="22" fill="#C9A227"/>
+  <text x="350" y="72" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#10233F">קורקינט חשמלי</text>
+</svg>
