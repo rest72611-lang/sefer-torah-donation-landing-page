@@ -299,6 +299,7 @@ p {
   flex: 1 1 33.333%;
   margin: 0;
   min-height: 330px;
+  background: var(--color-navy-dark);
 }
 
 .rabbi-gallery img {
@@ -306,6 +307,16 @@ p {
   height: 100%;
   min-height: 330px;
   object-fit: cover;
+}
+
+.rabbi-gallery .baba-sali-figure {
+  background: linear-gradient(180deg, #d8b47f 0%, #f3ead9 58%, #8d623d 100%);
+}
+
+.rabbi-gallery .baba-sali-figure img {
+  object-fit: contain;
+  object-position: center center;
+  padding: 0;
 }
 
 .rabbi-gallery figcaption {
